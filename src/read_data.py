@@ -8,6 +8,8 @@ from torchvision.utils import make_grid
 
 writer = SummaryWriter("logs")
 
+# hymenoptera 数据集使用： https://www.kaggle.com/datasets/ajayrana/hymenoptera-data?resource=download
+# ICDAR2013 数据集使用： https://rrc.cvc.uab.es/?ch=2&com=downloads
 class MyData(Dataset):
     # 一般为整个class提供全局变量，为 getitem、next提供方法的变量
     def __init__(self, root_dir, image_dir, label_dir, transform):
