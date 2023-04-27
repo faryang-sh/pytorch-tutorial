@@ -9,7 +9,7 @@ from torchvision.utils import make_grid
 writer = SummaryWriter("logs")
 
 class MyData(Dataset):
-
+    # 一般为整个class提供全局变量，为 getitem、next提供方法的变量
     def __init__(self, root_dir, image_dir, label_dir, transform):
         self.root_dir = root_dir
         self.image_dir = image_dir
